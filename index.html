@@ -1,27 +1,651 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fu system 體態諮詢：給高工時族群的低阻力體態管理系統。45天體態重啟、飲食決策SOP、20分鐘徒手訓練與每週追蹤。" />
-  <title>Fu system 體態諮詢｜高工時族群的低阻力體態管理系統</title>
-  <style>
-    :root{--bg:#080809;--card:#151518;--card2:#1e1e23;--text:#f6f6f0;--muted:#b8b8ae;--soft:#7e7e74;--line:rgba(255,255,255,.13);--yellow:#f5c400;--yellow2:#ffdd3d;--max:1120px;--r:24px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;background:radial-gradient(circle at 12% 0,rgba(245,196,0,.18),transparent 28rem),radial-gradient(circle at 100% 16%,rgba(255,255,255,.08),transparent 24rem),var(--bg);color:var(--text);line-height:1.72}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}.nav{position:sticky;top:0;z-index:50;background:rgba(8,8,9,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:.08em}.brand small{display:block;color:var(--soft);font-size:11px;letter-spacing:.12em}.links{display:flex;gap:18px;color:var(--muted);font-size:14px}.links a:hover{color:white}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:999px;padding:12px 18px;font-weight:900;background:rgba(255,255,255,.05)}.btn.primary{background:var(--yellow);border-color:var(--yellow);color:#090909}.hero{padding:82px 0 66px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}.eyebrow{color:var(--yellow2);font-weight:900;letter-spacing:.14em;font-size:13px;text-transform:uppercase}h1{font-size:clamp(40px,6vw,72px);line-height:1.03;letter-spacing:-.06em;margin:14px 0 20px}.lead{font-size:clamp(18px,2vw,23px);color:var(--muted);max-width:720px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.proof{border:1px solid var(--line);border-radius:32px;padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));box-shadow:0 24px 80px rgba(0,0,0,.35)}.proof-title{font-size:18px;color:var(--yellow2);font-weight:900}.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.kpi{border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.04);padding:16px}.kpi b{display:block;color:var(--yellow2);font-size:28px}.kpi span{color:var(--muted);font-size:13px}.note{color:var(--soft);font-size:13px;margin-top:14px}section{padding:72px 0;border-top:1px solid var(--line)}.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}.head h2{font-size:clamp(31px,4vw,48px);line-height:1.12;letter-spacing:-.045em;margin:0}.head p{max-width:560px;color:var(--muted);margin:0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.025));padding:24px}.card h3{margin:0 0 10px;font-size:22px;line-height:1.25}.card p,.card li{color:var(--muted)}.card ul{margin:12px 0 0;padding-left:20px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tag{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:12px}.steps{display:grid;gap:12px;counter-reset:step}.step{counter-increment:step;display:grid;grid-template-columns:58px 1fr;gap:16px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.04);padding:18px}.step:before{content:counter(step);width:44px;height:44px;border-radius:14px;background:var(--yellow);color:#090909;display:grid;place-items:center;font-weight:900;font-size:18px}.step b{display:block;font-size:18px}.step span{color:var(--muted)}.policy{border:1px solid rgba(245,196,0,.34);border-radius:22px;background:rgba(245,196,0,.08);padding:22px;color:#f8e8a4}.footer{padding:38px 0;border-top:1px solid var(--line);color:var(--soft)}.footerin{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}@media(max-width:880px){.links{display:none}.hero{padding-top:54px}.hero-grid,.grid2{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.head{display:block}.head p{margin-top:12px}.kpis{grid-template-columns:1fr 1fr}}@media(max-width:520px){.wrap{width:calc(100% - 24px)}.kpis{grid-template-columns:1fr}h1{font-size:42px}}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="description" content="Fu system 飲食決策矩陣：給高工時族群的食物料號表。用省時、飽足、每百卡密度排序蛋白質與纖維，累的時候也能照拿照吃，不用每餐重新研究。" />
+<meta name="theme-color" content="#0a0b0d" />
+<title>Fu system｜飲食決策矩陣（支柱 2）</title>
+<style>
+  :root{
+    --bg:#0a0b0d; --bg2:#0e0f12;
+    --text:#f6f6f0; --muted:#b6b6ac; --soft:#7c7c72;
+    --line:rgba(255,255,255,.12); --line2:rgba(255,255,255,.07);
+    --yellow:#f5c400; --yellow2:#ffdd3d;
+    --teal:#3ad6c0; --amber:#ffb454; --red:#e8705e;
+    --card:rgba(255,255,255,.045);
+    --r:20px;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono","Roboto Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;font-family:var(--sans);color:var(--text);line-height:1.7;
+    background:
+      radial-gradient(40rem 26rem at 8% -4%,rgba(245,196,0,.13),transparent 60%),
+      radial-gradient(34rem 24rem at 102% 6%,rgba(58,214,192,.08),transparent 60%),
+      var(--bg);
+    background-repeat:no-repeat;
+    padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(880px,calc(100% - 32px));margin:auto}
+  .mono{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:60;background:rgba(10,11,13,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+  .navin{height:60px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .brand{font-weight:900;letter-spacing:.08em;font-size:15px;line-height:1.05}
+  .brand small{display:block;color:var(--soft);font-size:9.5px;letter-spacing:.16em;font-weight:700}
+  .back{color:var(--muted);font-size:13px;font-weight:700;white-space:nowrap}
+  .back:hover{color:#fff}
+
+  /* hero */
+  .hero{padding:38px 0 8px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--yellow2);font-weight:900;letter-spacing:.14em;font-size:11.5px;text-transform:uppercase;font-family:var(--mono)}
+  .eyebrow b{color:#090909;background:var(--yellow);border-radius:6px;padding:2px 7px;font-size:11px;letter-spacing:.06em}
+  h1{font-size:clamp(31px,8vw,46px);line-height:1.06;letter-spacing:-.045em;margin:14px 0 12px;font-weight:900}
+  .lead{font-size:clamp(15px,4vw,18px);color:var(--muted);margin:0;max-width:46ch}
+  .metaline{margin-top:16px;font-family:var(--mono);font-size:12px;color:var(--soft);display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .metaline span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal)}
+
+  /* read guide */
+  .guide{margin-top:24px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:16px 16px 6px}
+  .guide-h{font-size:13px;font-weight:800;color:var(--text);margin:0 0 12px;display:flex;align-items:center;gap:8px}
+  .order{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;font-weight:700;margin-bottom:14px}
+  .order .o{padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+  .order .o.lead{border-color:rgba(245,196,0,.5);color:var(--yellow2)}
+  .order .arr{color:var(--soft)}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);padding-bottom:12px}
+  .legend i{display:inline-block;width:22px;height:7px;border-radius:4px;vertical-align:middle;margin-right:6px}
+  .lg-hi i{background:var(--teal)} .lg-mid i{background:var(--amber)} .lg-lo i{background:var(--red)}
+
+  /* sticky tools */
+  .tools{position:sticky;top:60px;z-index:55;margin-top:22px;padding:12px 0;background:linear-gradient(180deg,var(--bg) 72%,transparent);backdrop-filter:blur(8px)}
+  .search{width:100%;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);border-radius:14px;padding:12px 14px;font-size:15px;font-family:var(--sans)}
+  .search::placeholder{color:var(--soft)}
+  .search:focus{outline:none;border-color:rgba(245,196,0,.55);box-shadow:0 0 0 3px rgba(245,196,0,.12)}
+  .scen{display:flex;gap:8px;overflow-x:auto;margin-top:10px;padding-bottom:4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .scen::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);border-radius:999px;padding:9px 14px;font-size:13.5px;font-weight:700;cursor:pointer;transition:.18s;white-space:nowrap}
+  .chip:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+  .chip.on{background:var(--yellow);border-color:var(--yellow);color:#090909}
+  .chip.reset{color:var(--soft)}
+
+  /* section */
+  section.matrix{padding:26px 0 8px}
+  section[id]{scroll-margin-top:184px}
+  .sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:6px}
+  .sec-h h2{font-size:clamp(22px,6vw,30px);letter-spacing:-.03em;margin:0;font-weight:900}
+  .count{font-family:var(--mono);font-size:12.5px;color:var(--soft)}
+  .sec-sub{color:var(--muted);margin:2px 0 14px;font-size:14px;max-width:52ch}
+
+  /* controls */
+  .ctrl{display:flex;flex-direction:column;gap:9px;margin-bottom:16px}
+  .seg{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.03)}
+  .seg button{flex:1;border:0;background:transparent;color:var(--muted);padding:9px 4px;font-size:13px;font-weight:800;font-family:var(--sans);cursor:pointer;transition:.16s;border-right:1px solid var(--line2)}
+  .seg button:last-child{border-right:0}
+  .seg button.on{background:rgba(245,196,0,.16);color:var(--yellow2)}
+  .seg button:hover:not(.on){color:#fff}
+  .fil{display:flex;gap:7px;flex-wrap:wrap}
+  .fil .chip{flex:0 0 auto;padding:7px 12px;font-size:12.5px}
+  .fil .chip.on{background:rgba(58,214,192,.16);border-color:rgba(58,214,192,.5);color:var(--teal)}
+
+  /* food cards */
+  .cards{display:grid;grid-template-columns:1fr;gap:12px}
+  .fcard{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:15px 15px 14px;animation:rise .4s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .fcard-h{display:flex;align-items:center;gap:12px}
+  .ficon{font-size:26px;line-height:1;flex:0 0 auto;width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:rgba(255,255,255,.05);border:1px solid var(--line2)}
+  .fname{flex:1;min-width:0}
+  .fname h4{margin:0;font-size:16.5px;font-weight:800;letter-spacing:-.01em}
+  .fsub{font-family:var(--mono);font-size:11.5px;color:var(--soft);margin-top:2px}
+  .dens{flex:0 0 auto;text-align:right;line-height:1.1}
+  .dens b{display:block;font-family:var(--mono);font-size:21px;font-weight:800}
+  .dens em{font-style:normal;font-family:var(--mono);font-size:9.5px;color:var(--soft);letter-spacing:.02em}
+  .dens-hi b{color:var(--teal)} .dens-mid b{color:var(--amber)} .dens-lo b{color:var(--muted)}
+
+  .bars{margin:13px 0 11px;display:grid;gap:7px}
+  .bar{display:grid;grid-template-columns:40px 1fr 30px;align-items:center;gap:9px}
+  .bar label{font-size:11.5px;color:var(--soft);font-weight:700}
+  .track{height:7px;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden}
+  .track i{display:block;height:100%;border-radius:5px}
+  .bar .v{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right}
+  .t-hi{background:linear-gradient(90deg,#2bb6a3,var(--teal))}
+  .t-mid{background:linear-gradient(90deg,#d8902f,var(--amber))}
+  .t-lo{background:linear-gradient(90deg,#b8503f,var(--red))}
+
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
+  .tag{font-size:11px;font-weight:700;border-radius:999px;padding:4px 9px;border:1px solid var(--line);color:var(--muted)}
+  .tag.go{border-color:rgba(58,214,192,.4);color:var(--teal)}
+  .tag.warn{border-color:rgba(232,112,94,.4);color:var(--red)}
+  .fnote{margin:0;font-size:13px;color:var(--muted);line-height:1.6}
+
+  details.sub{margin-top:10px;border-top:1px solid var(--line2);padding-top:9px}
+  details.sub summary{list-style:none;cursor:pointer;font-size:12.5px;font-weight:800;color:var(--yellow2);display:flex;align-items:center;gap:6px}
+  details.sub summary::-webkit-details-marker{display:none}
+  details.sub summary::after{content:"＋ 料理方式";font-family:var(--mono);font-size:11px}
+  details.sub[open] summary::after{content:"－ 收起"}
+  .subgrid{margin-top:9px;display:grid;gap:7px}
+  .subrow{display:grid;grid-template-columns:1fr auto;gap:8px;font-size:12.5px;border:1px solid var(--line2);border-radius:11px;padding:8px 10px;background:rgba(255,255,255,.02)}
+  .subrow b{font-weight:800}
+  .subrow .sm{font-family:var(--mono);color:var(--soft);font-size:11px}
+  .subrow .sn{grid-column:1/-1;color:var(--soft);font-size:11.5px;margin-top:2px}
+  .rangebox{margin-top:9px;border:1px dashed var(--line);border-radius:12px;padding:9px 11px;font-size:12.5px;color:var(--muted)}
+  .rangebox .pill{font-family:var(--mono);font-size:10.5px;color:var(--amber);border:1px solid rgba(255,180,84,.4);border-radius:999px;padding:2px 8px;margin-left:6px}
+
+  .empty{text-align:center;color:var(--soft);font-size:14px;padding:30px 10px;border:1px dashed var(--line);border-radius:var(--r)}
+
+  /* recipes */
+  .rcard{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:16px;animation:rise .4s ease both}
+  .rcard-h{display:flex;align-items:center;gap:11px}
+  .rcard-h .ficon{font-size:24px}
+  .rname{flex:1}
+  .rname h4{margin:0;font-size:17px;font-weight:800}
+  .rtime{font-family:var(--mono);font-size:11.5px;color:var(--yellow2);margin-top:2px}
+  .effort{flex:0 0 auto;display:flex;gap:3px;align-items:center}
+  .effort span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.16)}
+  .effort span.on{background:var(--yellow)}
+  .rdesc{color:var(--muted);font-size:13.5px;margin:11px 0}
+  .steps{counter-reset:s;display:grid;gap:7px;margin:0;padding:0;list-style:none}
+  .steps li{counter-increment:s;display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:13px;color:var(--muted)}
+  .steps li::before{content:counter(s);font-family:var(--mono);font-size:11px;font-weight:800;color:#090909;background:var(--teal);width:20px;height:20px;border-radius:7px;display:grid;place-items:center}
+  .ring{margin-top:11px;display:flex;gap:6px;flex-wrap:wrap}
+  .ring .tag{color:var(--muted)}
+  .rmacros{margin-top:11px;display:flex;gap:14px;font-family:var(--mono);font-size:12.5px;color:var(--soft);border-top:1px solid var(--line2);padding-top:10px}
+  .rmacros b{color:var(--teal)}
+
+  /* principles */
+  .pgrid{display:grid;grid-template-columns:1fr;gap:11px}
+  .pcard{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:16px}
+  .pcard h4{margin:0 0 6px;font-size:15.5px;font-weight:800;display:flex;align-items:center;gap:9px}
+  .pcard .pi{font-size:18px}
+  .pcard p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.65}
+
+  /* cta */
+  .cta{margin:34px 0 12px;border:1px solid rgba(245,196,0,.32);border-radius:24px;background:linear-gradient(180deg,rgba(245,196,0,.1),rgba(245,196,0,.03));padding:24px 20px;text-align:center}
+  .cta h3{margin:0 0 8px;font-size:21px;font-weight:900;letter-spacing:-.02em}
+  .cta p{margin:0 auto 18px;color:#f3e6ad;font-size:14.5px;max-width:42ch}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--yellow);color:#090909;border-radius:999px;padding:14px 26px;font-weight:900;font-size:15px}
+  .btn:hover{background:var(--yellow2)}
+  .btn-ghost{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--muted);font-size:13px;font-weight:700}
+
+  footer{padding:26px 0 36px;border-top:1px solid var(--line);margin-top:28px;color:var(--soft);font-size:12.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+  .sig{font-weight:800;color:var(--muted)}
+  .disc{font-size:11.5px;color:var(--soft);line-height:1.6;margin-top:8px}
+
+  h2.block{font-size:clamp(22px,6vw,30px);letter-spacing:-.03em;margin:34px 0 4px;font-weight:900}
+  .block-sub{color:var(--muted);font-size:14px;margin:0 0 16px;max-width:52ch}
+
+  /* time-first tiers */
+  #decision{padding:8px 0 4px}
+  .tiers{display:grid;grid-template-columns:1fr;gap:11px;margin-bottom:14px}
+  .tier{text-align:left;border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:15px 16px;cursor:pointer;color:inherit;font:inherit;transition:.18s;display:block;width:100%}
+  .tier:hover{border-color:rgba(245,196,0,.45);background:rgba(245,196,0,.05)}
+  .tier-h{display:flex;align-items:center;gap:11px;margin-bottom:6px}
+  .tmin{flex:0 0 auto;font-size:15px;font-weight:800;color:#090909;background:var(--yellow);border-radius:9px;padding:5px 9px;letter-spacing:-.02em}
+  .tier-h b{font-size:16px;font-weight:800}
+  .tier p{margin:0 0 10px;color:var(--muted);font-size:13.5px;line-height:1.6}
+  .tier-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+  .tier-go{font-size:13px;font-weight:800;color:var(--yellow2)}
+  .situ{display:grid;grid-template-columns:1fr;gap:11px}
+  .situ-card{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);padding:14px 16px}
+  .situ-card b{font-size:14.5px;display:block;margin-bottom:6px}
+  .situ-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+  .situ-card p b{display:inline;color:var(--teal)}
+  .situ-go{margin-top:10px;border:1px solid var(--line);background:rgba(58,214,192,.1);color:var(--teal);border-radius:999px;padding:7px 13px;font-size:12.5px;font-weight:800;cursor:pointer}
+  .situ-go:hover{border-color:rgba(58,214,192,.5)}
+
+  /* tool row + reset */
+  .toolrow{display:flex;gap:8px;align-items:stretch}
+  .toolrow .search{flex:1}
+  .resetbtn{flex:0 0 auto;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--soft);border-radius:14px;padding:0 16px;font-size:13px;font-weight:700;cursor:pointer}
+  .resetbtn:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+
+  /* staples */
+  .staples{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:0 0 16px;padding:12px 14px;border:1px dashed var(--line);border-radius:14px;background:rgba(255,255,255,.02)}
+  .staples .slbl{font-size:12px;font-weight:800;color:var(--yellow2);margin-right:4px}
+
+  /* food bom */
+  .bom .fname h4{font-size:15.5px}
+  .bomflow{margin:12px 0 10px;display:grid;gap:8px}
+  .bomrow{display:grid;grid-template-columns:54px 1fr;gap:10px;align-items:start;font-size:13px}
+  .bomrow .bl{font-size:11px;font-weight:800;color:var(--soft);padding-top:2px}
+  .bomrow.swap .bl{color:var(--teal)}
+  .bomrow p{margin:0;color:var(--muted);line-height:1.55}
+  .bomrow.swap p{color:var(--text)}
+  .bommetrics{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
+
+  @media (min-width:680px){
+    .tiers{grid-template-columns:1fr 1fr 1fr}
+    .situ{grid-template-columns:1fr 1fr}
+    .hero{padding:54px 0 8px}
+    .cards{grid-template-columns:1fr 1fr;gap:14px}
+    .pgrid{grid-template-columns:1fr 1fr}
+    .seg button{font-size:13.5px;padding:10px}
+    .ctrl{flex-direction:row;align-items:center;justify-content:space-between}
+    .seg{flex:0 0 auto;width:auto}
+    .seg button{padding:9px 16px;flex:0 0 auto}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+  :focus-visible{outline:2px solid var(--yellow2);outline-offset:2px;border-radius:6px}
+</style>
 </head>
 <body>
-  <nav class="nav"><div class="wrap navin"><a class="brand" href="#top">FU SYSTEM<small>TIME-BACK BODY SYSTEM</small></a><div class="links"><a href="#service">服務內容</a><a href="#proof">信任支柱</a><a href="#system">45天系統</a><a href="/food-matrix/">飲食矩陣</a><a href="#policy">付款條款</a></div></div></nav>
-  <main id="top">
-    <header class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Systems Designer for Busy Bodies</div><h1>把高工時的身材焦慮，變成可執行的省時系統。</h1><p class="lead">Fu system 體態諮詢協助忙碌上班族建立 45 天體態重啟、飲食決策 SOP、20 分鐘徒手訓練與每週追蹤。不賣複雜知識，交付的是能放進真實生活的行動系統。</p><div class="actions"><a class="btn primary" href="#service">看服務內容</a><a class="btn" href="/food-matrix/">打開飲食矩陣</a></div><p class="note">本服務為一般體態管理、飲食決策、徒手訓練與生活習慣建立建議，非醫療、診斷、治療或心理諮商服務。</p></div><aside class="proof"><div class="proof-title">個人品牌證據庫</div><p>從曾經 94kg、不喜歡自己身體，到長期維持約 74kg / 15% 上下體脂；從半導體現場工程師，到用系統思維拆解訓練、飲食與生活阻力。</p><div class="kpis"><div class="kpi"><b>94→74</b><span>體態轉變與長期維持</span></div><div class="kpi"><b>8年</b><span>不是短期挑戰，是可維持系統</span></div><div class="kpi"><b>20分</b><span>高工時可執行訓練模組</span></div><div class="kpi"><b>45天</b><span>建立第一輪生活節奏</span></div></div><p class="note">你上傳的照片素材已先轉成首頁的證據敘事區塊；若要進一步提高視覺公信力，下一步應上傳壓縮後的公開圖片檔到 /assets，再接回本頁。</p></aside></div></header>
-    <section id="service"><div class="wrap"><div class="head"><h2>服務不是菜單。<br>服務是把你帶著做到。</h2><p>你真正付費的不是知識，而是少走彎路、少做決策、有人幫你把高阻力生活拆成每週可執行的步驟。</p></div><div class="grid3"><div class="card"><h3>45 天體態重啟諮詢</h3><p>盤點目前作息、外食頻率、訓練經驗與最大卡點，建立第一輪低阻力行動計畫。</p><ul><li>初始狀態盤點</li><li>每週行動目標</li><li>飲食與訓練調整</li></ul></div><div class="card"><h3>飲食決策 SOP</h3><p>不是叫你每天算熱量，而是讓你看到外食、超商、便當、火鍋就知道怎麼選。</p><ul><li>蛋白質優先順序</li><li>纖維補足策略</li><li>聚餐與加班日規則</li></ul></div><div class="card"><h3>20 分鐘訓練模組</h3><p>用徒手與低器材方案，讓訓練不再被健身房距離、加班、出差摧毀。</p><ul><li>居家/出差可執行</li><li>每週訓練安排</li><li>強度漸進與回報</li></ul></div></div></div></section>
-    <section id="proof"><div class="wrap"><div class="head"><h2>三個信任支柱</h2><p>Fu system 的核心不是健身房文化，而是系統設計、身體主權與身份重塑。這些支柱會決定服務能不能長期做下去。</p></div><div class="grid3"><div class="card"><h3>01｜Systems Thinking</h3><p>半導體設備工程背景，習慣拆解資訊落差、阻力、流程瓶頸。人生過得亂，常常不是你不努力，而是系統順序錯了。</p><div class="tags"><span class="tag">流程設計</span><span class="tag">決策外包</span><span class="tag">低阻力</span></div></div><div class="card"><h3>02｜Physical Ownership</h3><p>曾經討厭自己的身體，後來把飲食與訓練做成可維持系統。目標不是極端自律，而是把身體主導權拿回來。</p><div class="tags"><span class="tag">94kg → 74kg</span><span class="tag">維持第 8 年</span><span class="tag">攀岩驗收</span></div></div><div class="card"><h3>03｜Self Reinvention</h3><p>自信、表達與身體狀態都不是天生固定。人會活成自己反覆練習的樣子，所以系統要支援的是新的身份。</p><div class="tags"><span class="tag">身份轉換</span><span class="tag">長期主義</span><span class="tag">可複利</span></div></div></div></div></section>
-    <section id="system"><div class="wrap"><div class="head"><h2>45 天身體上軌道</h2><p>架構以兩件事為主：讓身體更有訓練刺激，讓飲食更少失控。所有工具都只是為了降低執行阻力。</p></div><div class="steps"><div class="step"><div><b>Day 1–3｜準備期</b><span>建立喝水、進食順序、蛋白質與睡眠紀錄，不追求完美，只建立可重複節奏。</span></div></div><div class="step"><div><b>Day 4–31｜纖體期</b><span>用高蛋白、蔬菜纖維、低阻力外食選擇與每週訓練建立赤字與執行感。</span></div></div><div class="step"><div><b>Day 32–45｜代謝期</b><span>回加全穀與訓練刺激，讓身體不是只會少吃，而是能逐步承接更強輸出。</span></div></div></div></div></section>
-    <section id="food"><div class="wrap"><div class="head"><h2>飲食矩陣已移到子頁</h2><p>原本首頁的蛋白質、纖維、一鍋料理與飲食方針，現在變成 Fu system 品牌下的工具子頁。首頁則改成金流審核更容易理解的正式服務頁。</p></div><div class="card"><h3>Food Decision OS</h3><p>當你加班、外食、聚餐、很累的時候，不該每天重新研究健康飲食。飲食矩陣的目的，是讓你用更少腦力選到更好的蛋白質、纖維與低阻力料理。</p><div class="actions"><a class="btn primary" href="/food-matrix/">打開飲食矩陣</a><a class="btn" href="#policy">查看服務條款</a></div></div></div></section>
-    <section id="fit"><div class="wrap"><div class="head"><h2>適合誰，不適合誰</h2><p>這不是大眾流量頁，而是篩選頁。越清楚排除，越能讓真正適合的人放心付款。</p></div><div class="grid2"><div class="card"><h3>適合你，如果你：</h3><ul><li>工作時間長，無法每天花 1–2 小時健身</li><li>常外食，不想每天研究熱量與菜單</li><li>曾經靠意志力減肥，但很快反彈</li><li>想改善體態、外表與生活掌控感</li><li>願意配合基本紀錄與每週回報</li></ul></div><div class="card"><h3>不適合你，如果你：</h3><ul><li>期待完全不用執行也會改變</li><li>需要醫療診斷、治療或疾病處置</li><li>只想拿免費菜單，不想被追蹤</li><li>無法配合基本飲食與訓練行動</li><li>追求極端快速減重或不健康方法</li></ul></div></div></div></section>
-    <section id="policy"><div class="wrap"><div class="head"><h2>收費、付款與退款政策</h2><p>以下資訊提供金流審核與消費者付款前確認。實際服務內容會於付款前再次確認。</p></div><div class="policy"><b>收費方式：</b>本服務依實際諮詢方案內容報價。付款方式包含信用卡、ATM 轉帳、一次付清或依合作方案分期。實際費用會於諮詢後確認，並於付款前提供完整服務內容說明。</div><div class="grid3" style="margin-top:16px"><div class="card"><h3>退款與取消</h3><p>付款後若尚未開始服務，消費者可於 7 日內提出取消申請。若服務已開始，將依已提供服務比例扣除相關費用後處理。</p></div><div class="card"><h3>個人化交付</h3><p>數位內容、個人化規劃、諮詢紀錄、飲食或訓練方案一經交付，因具個人化與即時服務性質，恕無法全額退款。</p></div><div class="card"><h3>健康免責</h3><p>本服務非醫療、診斷、治療、心理諮商或營養師醫療服務。如有疾病、疼痛、用藥、懷孕或特殊狀況，請先諮詢合格醫療專業人員。</p></div></div></div></section>
-    <section id="contact"><div class="wrap"><div class="head"><h2>商店資訊</h2><p>商店名稱：Fu system 體態諮詢。服務型態：線上體態管理與生活習慣諮詢服務。</p></div><div class="grid2"><div class="card"><h3>基本資料</h3><ul><li>商店名稱：Fu system 體態諮詢</li><li>負責人／聯絡人：郭釜瑜</li><li>服務地區：台灣／線上諮詢</li><li>營業時間：週一至週五 10:00–18:00</li><li>聯絡信箱：請於審核前改成正式客服 Email</li></ul></div><div class="card"><h3>付款前會確認</h3><ul><li>服務期間與交付內容</li><li>每週回報方式</li><li>付款金額與付款方式</li><li>取消、延期與退款規則</li><li>是否有需要先諮詢醫療專業的狀況</li></ul></div></div></div></section>
-  </main>
-  <footer class="footer"><div class="wrap footerin"><div>© 2026 Fu system 體態諮詢</div><div>Time-Back Body System｜<a href="/food-matrix/">飲食矩陣工具</a></div></div></footer>
+<nav class="nav"><div class="wrap navin">
+  <a class="brand" href="/">FU SYSTEM<small>FOOD DECISION OS</small></a>
+  <a class="back" href="/">← 回首頁</a>
+</div></nav>
+
+<main>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow"><b>支柱 2</b> 飲食決策矩陣</div>
+  <h1>別再每餐<br>重新研究。</h1>
+  <p class="lead">累、忙、外食、加班的時候，照排序拿、照組合吃就好。這份矩陣只做一件事——把每餐的判斷成本壓到接近零。</p>
+  <div class="metaline">
+    <span><i class="dot"></i>排序優先：時間 → 金錢</span>
+    <span id="meta-ver"></span>
+  </div>
+
+  <div class="guide">
+    <p class="guide-h">怎麼讀這張表</p>
+    <div class="order">
+      <span class="o lead">時間</span><span class="arr">→</span>
+      <span class="o">飽足</span><span class="arr">→</span>
+      <span class="o">每百卡密度</span><span class="arr">→</span>
+      <span class="o">成本</span>
+    </div>
+    <div class="legend">
+      <span class="lg-hi"><i></i>強（直接選）</span>
+      <span class="lg-mid"><i></i>中（可用）</span>
+      <span class="lg-lo"><i></i>弱（情境性）</span>
+    </div>
+  </div>
+</div></header>
+
+<section id="decision"><div class="wrap">
+  <h2 class="block">時間先行決策</h2>
+  <p class="block-sub">先問一件事：你現在有幾分鐘？選對階層，下面的矩陣就自動幫你篩好。</p>
+  <div class="tiers" id="tiers">
+    <button class="tier" data-scen="t1">
+      <div class="tier-h"><span class="tmin mono">0–2′</span><b>極限忙碌・即食</b></div>
+      <p>開會前、通勤、加班沒電。零烹調，開封即吃，先擋住直接失控。</p>
+      <div class="tier-tags" id="t1-tags"></div>
+      <span class="tier-go">套用這個階層 →</span>
+    </button>
+    <button class="tier" data-scen="t2">
+      <div class="tier-h"><span class="tmin mono">3–10′</span><b>超商・外食快選</b></div>
+      <p>午休很短、只能超商、晚餐剩外帶。最省時、最飽、最低傷害，不用猜。</p>
+      <div class="tier-tags" id="t2-tags"></div>
+      <span class="tier-go">套用這個階層 →</span>
+    </button>
+    <button class="tier" data-scen="t3">
+      <div class="tier-h"><span class="tmin mono">10–25′</span><b>低阻力・自煮</b></div>
+      <p>想吃好一點又不想備餐到崩潰。最少食材、最少洗碗，一鍋完成。</p>
+      <div class="tier-tags" id="t3-tags"></div>
+      <span class="tier-go">看一鍋料理 →</span>
+    </button>
+  </div>
+  <div class="situ">
+    <div class="situ-card">
+      <b>🍻 聚餐・酒局・高熱量</b>
+      <p>先止血、再回軌：到場先吃<b>蛋白與菜</b>墊底，酒精這 45 天盡量歸零，隔天照回軌流程把節奏接回來——不是從零重來。決定復胖的是回軌能力，不是犯錯次數。</p>
+    </div>
+    <div class="situ-card">
+      <b>🍱 家庭飯桌（家人不一起吃健康餐）</b>
+      <p>家裡煮什麼你都得吃，不必另外開伙、不必跟家人衝突。用即食又免冷藏的<b>補位食材</b>，把缺的蛋白＋纖維補回來就好。</p>
+      <button class="situ-go" data-scen="home">看補位食材 →</button>
+    </div>
+  </div>
+</div></section>
+
+<div class="tools"><div class="wrap">
+  <div class="toolrow">
+    <input class="search" id="search" type="search" inputmode="search" placeholder="搜尋食材… 例如 雞胸、豆腐、罐頭" aria-label="搜尋食材" />
+    <button class="resetbtn" data-scen="reset" type="button">重設</button>
+  </div>
+</div></div>
+
+<section class="matrix" id="protein"><div class="wrap">
+  <div class="sec-h"><h2>蛋白質</h2><span class="count" id="p-count"></span></div>
+  <p class="sec-sub">先補蛋白。看「每百卡蛋白質」越高，同樣熱量帶來越多飽足與肌肉保留。</p>
+  <div class="ctrl">
+    <div class="seg" id="p-sort" role="group" aria-label="蛋白質排序">
+      <button data-sort="time" class="on">省時</button>
+      <button data-sort="sat">飽足</button>
+      <button data-sort="density">密度</button>
+      <button data-sort="cost">划算</button>
+    </div>
+    <div class="fil" id="p-fil">
+      <button class="chip" data-fil="instant">即食</button>
+      <button class="chip" data-fil="nocool">免冷藏</button>
+      <button class="chip" data-fil="plant">植物性</button>
+    </div>
+  </div>
+  <div class="cards" id="p-cards"></div>
+</div></section>
+
+<section class="matrix" id="fiber"><div class="wrap">
+  <div class="sec-h"><h2>纖維與蔬果</h2><span class="count" id="f-count"></span></div>
+  <p class="sec-sub">蛋白補完補體積。高纖維、低熱量的選項負責拉長飽足、擋住暴食。</p>
+  <div class="ctrl">
+    <div class="seg" id="f-sort" role="group" aria-label="纖維排序">
+      <button data-sort="time" class="on">省時</button>
+      <button data-sort="sat">飽足</button>
+      <button data-sort="density">密度</button>
+      <button data-sort="cost">划算</button>
+    </div>
+    <div class="fil" id="f-fil">
+      <button class="chip" data-fil="instant">即食</button>
+      <button class="chip" data-fil="nocool">免冷藏</button>
+      <button class="chip" data-fil="highsat">高飽足</button>
+    </div>
+  </div>
+  <div class="cards" id="f-cards"></div>
+</div></section>
+
+<section id="foodbom" hidden><div class="wrap">
+  <h2 class="block">破功替代矩陣 ｜ Food BOM</h2>
+  <p class="block-sub">戒不掉的不戒，改造它。保留你要的口感（甜・爽・濃），把負擔降到趨近於零——這是「撐得久」而不是「撐三個月就反彈」的關鍵。</p>
+  <div class="cards" id="bom-cards"></div>
+</div></section>
+
+<section id="recipes"><div class="wrap">
+  <h2 class="block">一鍋料理 SOP ｜ 25 分鐘・最少洗碗</h2>
+  <p class="block-sub">不想外食又不想備餐到崩潰時，照其中一道做。一口鍋、最少洗碗，25 分鐘內上桌。</p>
+  <div class="staples" id="staples"></div>
+  <div class="cards" id="r-cards"></div>
+</div></section>
+
+<section id="principles"><div class="wrap">
+  <h2 class="block">為什麼這樣排序</h2>
+  <p class="block-sub">矩陣背後的六條方針。不是要你更自律，是把判斷外包給系統。</p>
+  <div class="pgrid" id="p-principles"></div>
+</div></section>
+
+<section id="book"><div class="wrap">
+  <div class="cta">
+    <h3>矩陣是工具，不是全部。</h3>
+    <p>這份表幫你解決「現在吃什麼」。完整的 45 天系統，會把「時間先行」變成不用想的反射，連同訓練與每週追蹤一起跑——讓結果穩定，不靠意志力。</p>
+    <a class="btn" href="https://calendly.com/ring390/nothinkfit" target="_blank" rel="noopener">預約 15 分鐘對談 →</a>
+    <div><a class="btn-ghost" href="/">← 回 Fu system 首頁看完整服務</a></div>
+  </div>
+  <p class="disc">本內容為一般體態管理與飲食決策建議，非醫療、診斷、治療或營養師醫療服務。如有疾病、用藥、懷孕或特殊狀況，請先諮詢合格醫療專業人員。</p>
+</div></section>
+</main>
+
+<footer><div class="wrap" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;width:min(880px,calc(100% - 32px))">
+  <span class="sig">⚙️ Fu System</span>
+  <span>飲食決策矩陣 · 支柱 2 · <a href="/" style="color:var(--muted)">回首頁</a></span>
+</div></footer>
+
+<script>
+/* ───────────────────────────────────────────────
+   資料來源：../data.json 為唯一真實來源（你只改它）。
+   下方 FALLBACK 僅在 fetch 失敗時（例如離線預覽）使用，
+   屬於 render 容錯快照，不是維護點。上線後一律以 data.json 為準。
+   ─────────────────────────────────────────────── */
+const FALLBACK = {"meta":{"version":"1.0.0","updated":"2026-05-23","note":"時間成本為第一排序優先，金錢成本為第二順位"},"proteins":[{"id":"tofu","name":"板豆腐","icon":"⬜","time":90,"sat":90,"cost":60,"protein":8.5,"cal":80,"prep":3,"instant":true,"nocool":false,"plant":true,"satLevel":"中","note":"高體積低熱量的減脂神器。"},{"id":"tuna_can","name":"鮪魚罐頭(水煮)","icon":"🐟","time":98,"sat":70,"cost":75,"protein":24,"cal":100,"prep":1,"instant":true,"nocool":true,"plant":false,"satLevel":"中高","note":"開罐即食，蛋白密度極高。"},{"id":"chicken_breast_sv","name":"舒肥雞胸肉","icon":"🍗","time":98,"sat":90,"cost":45,"protein":23,"cal":110,"prep":1,"instant":true,"nocool":false,"plant":false,"satLevel":"很高","note":"便利與口感平衡最佳，即食雞胸首選。"},{"id":"beef_tendon","name":"牛腱(滷製)","icon":"🥩","time":92,"sat":98,"cost":50,"protein":23,"cal":120,"prep":2,"instant":true,"nocool":false,"plant":false,"satLevel":"極高","note":"抗暴食神器，咀嚼感帶來極強飽足。"},{"id":"egg","name":"雞蛋","icon":"🥚","time":95,"sat":65,"cost":75,"protein":13,"cal":150,"prep":0,"instant":true,"nocool":false,"plant":false,"satLevel":"中","note":"蛋白質品質標竿，料理方式影響每百卡密度。","subItems":[{"name":"水煮蛋","protein":13,"cal":140,"note":"蛋白/熱量比最高"},{"name":"茶葉蛋","protein":13,"cal":150,"note":"超商即食首選"},{"name":"炒蛋","protein":12,"cal":180,"note":"加油後熱量提升"},{"name":"煎蛋(荷包蛋)","protein":12,"cal":200,"note":"油量影響熱量"}]},{"id":"edamame","name":"毛豆仁","icon":"🫛","time":95,"sat":80,"cost":80,"protein":14.5,"cal":125,"prep":1,"instant":true,"nocool":false,"plant":true,"satLevel":"高","note":"兼具植物蛋白與即食便利性。"},{"id":"dried_tofu","name":"豆乾","icon":"🟫","time":85,"sat":75,"cost":92,"protein":19,"cal":160,"prep":5,"instant":true,"nocool":false,"plant":true,"satLevel":"中高","note":"便宜耐放的通勤神器。"},{"id":"whey_protein","name":"市售乳清蛋白","icon":"🥛","time":98,"sat":38,"cost":82,"protein":19,"cal":115,"prep":1,"instant":false,"nocool":true,"plant":false,"satLevel":"低","note":"吸收效率最高，但飽足感低。品牌間差異大。","isRange":true,"proteinMin":17,"proteinMax":21,"calMin":100,"calMax":130,"rangeNote":"各品牌差異：每百卡蛋白質約 17–21g，建議選擇成分單純、添加物少的品牌。子表格待補。"},{"id":"tofu_skin","name":"生豆皮","icon":"🟡","time":85,"sat":85,"cost":88,"protein":25.3,"cal":200,"prep":5,"instant":false,"nocool":false,"plant":true,"satLevel":"高","note":"植物性高蛋白密度，口感與飽足感兼具。"},{"id":"mackerel_can","name":"鯖魚罐頭","icon":"🐠","time":98,"sat":95,"cost":55,"protein":20,"cal":260,"prep":1,"instant":true,"nocool":true,"plant":false,"satLevel":"極高","note":"飽足超強且免冷藏，開罐即食，但熱量較高。"},{"id":"greek_yogurt","name":"希臘優格(無糖)","icon":"🫙","time":99,"sat":60,"cost":45,"protein":10,"cal":95,"prep":0,"instant":true,"nocool":false,"plant":false,"satLevel":"中","note":"早餐與宵夜友善，零準備。"}],"fibers":[{"id":"tomato","name":"番茄","icon":"🍅","time":95,"sat":40,"cost":70,"fiber":2,"cal":25,"prep":0,"instant":true,"nocool":false,"highsat":false,"satLevel":"低","note":"低熱量補充型，不需處理直接吃。"},{"id":"cucumber","name":"小黃瓜","icon":"🥒","time":95,"sat":55,"cost":70,"fiber":1.5,"cal":20,"prep":0,"instant":true,"nocool":false,"highsat":false,"satLevel":"低","note":"解嘴饞神器，不需處理。"},{"id":"dried_wakame","name":"乾海帶芽","icon":"🌿","time":85,"sat":55,"cost":75,"fiber":3,"cal":20,"prep":2,"instant":true,"nocool":true,"highsat":false,"satLevel":"中","note":"超低熱量，泡水即食，免冷藏好攜帶。"},{"id":"seaweed_snack","name":"海藻零食","icon":"🟢","time":95,"sat":35,"cost":55,"fiber":3,"cal":20,"prep":0,"instant":true,"nocool":true,"highsat":false,"satLevel":"中","note":"嘴饞替代方案，即食免冷藏。"},{"id":"daikon_oden","name":"白蘿蔔(關東煮)","icon":"⚪","time":95,"sat":50,"cost":80,"fiber":2,"cal":20,"prep":0,"instant":true,"nocool":false,"highsat":false,"satLevel":"中","note":"超商隨手即食纖維救星。"},{"id":"bamboo_shoot","name":"真空包綠竹筍","icon":"🎋","time":80,"sat":85,"cost":40,"fiber":5,"cal":60,"prep":0,"instant":true,"nocool":false,"highsat":true,"satLevel":"高","note":"超商最強纖維食物，開包即食。"},{"id":"black_fungus","name":"木耳","icon":"🍄","time":35,"sat":90,"cost":60,"fiber":5,"cal":35,"prep":5,"instant":false,"nocool":false,"highsat":true,"satLevel":"很高","note":"超強咀嚼感，延遲飢餓效果極好。"},{"id":"water_spinach","name":"空心菜/地瓜葉","icon":"🥬","time":40,"sat":80,"cost":85,"fiber":4,"cal":35,"prep":5,"instant":false,"nocool":false,"highsat":true,"satLevel":"高","note":"台灣神級CP值蔬菜，燙熟即可。"},{"id":"broccoli","name":"綠花椰菜","icon":"🥦","time":30,"sat":95,"cost":70,"fiber":5,"cal":55,"prep":5,"instant":false,"nocool":false,"highsat":true,"satLevel":"很高","note":"纖維體積雙王者，蒸或汆燙5分鐘。"},{"id":"chia_seeds","name":"奇亞籽","icon":"🫙","time":85,"sat":85,"cost":90,"fiber":5,"cal":75,"prep":1,"instant":true,"nocool":true,"highsat":true,"satLevel":"很高","note":"吸水膨脹，加水攪拌即可，真正高飽足神器。"},{"id":"guava","name":"芭樂","icon":"🍐","time":95,"sat":95,"cost":55,"fiber":8,"cal":120,"prep":0,"instant":true,"nocool":false,"highsat":true,"satLevel":"很高","note":"纖維水果王者，幾乎無敵，直接吃即可。"},{"id":"apple","name":"蘋果","icon":"🍎","time":95,"sat":75,"cost":65,"fiber":4,"cal":95,"prep":0,"instant":true,"nocool":false,"highsat":false,"satLevel":"中高","note":"最穩定方便的水果選項。"},{"id":"carrot","name":"紅蘿蔔","icon":"🥕","time":80,"sat":65,"cost":85,"fiber":3,"cal":40,"prep":5,"instant":false,"nocool":false,"highsat":false,"satLevel":"中高","note":"好攜帶且耐放，需切或汆燙後食用。"}],"recipes":[{"id":"protein_pot","name":"蛋白質地雷鍋","icon":"🍲","time":"10分鐘","desc":"一鍋搞定。熱水滾後丟食材，完全不需思考。","steps":["煮一鍋水（瓦斯爐或電鍋皆可）","丟入豆腐+蛋+花椰菜/地瓜葉","水滾後再煮3分鐘","加少許鹽或醬油即完成"],"ingredients":["板豆腐","雞蛋×2","花椰菜","地瓜葉","低鈉醬油"],"protein":"約28g","cal":"約280kcal","effort":1},{"id":"can_rice","name":"罐頭拌飯套餐","icon":"🥫","time":"3分鐘","desc":"零烹飪。開罐即食，碳水來源彈性替換。","steps":["電鍋煮好一批白飯（可週末備好）","取出鮪魚或鯖魚罐頭直接開蓋","加在飯上，旁邊擺番茄或小黃瓜","完成"],"ingredients":["鮪魚/鯖魚罐頭","白飯或糙米飯","番茄","小黃瓜"],"protein":"約26g","cal":"約400kcal","effort":1},{"id":"edamame_tofu","name":"毛豆豆腐燙菜組合","icon":"🫛","time":"8分鐘","desc":"植物性蛋白首選。簡單汆燙，口感清爽。","steps":["煮一鍋滾水","放入冷凍毛豆仁煮4分鐘","再加入板豆腐切塊，煮2分鐘","撈起，淋少許芝麻醬或醬油"],"ingredients":["毛豆仁","板豆腐","芝麻醬/醬油","選配：乾海帶芽"],"protein":"約25g","cal":"約320kcal","effort":2},{"id":"convenience_combo","name":"超商組合套餐","icon":"🏪","time":"0分鐘","desc":"完全外包決策。固定組合，走進超商直接拿。","steps":["進超商走一條路線","取舒肥雞胸肉×1 + 茶葉蛋×2","取真空包綠竹筍或芭樂×1","結帳離開"],"ingredients":["舒肥雞胸肉","茶葉蛋×2","真空包綠竹筍","芭樂"],"protein":"約38g","cal":"約420kcal","effort":1},{"id":"rice_cooker_box","name":"電鍋懶人蒸飯盒","icon":"🍱","time":"20分鐘(放著等)","desc":"備餐邏輯。一次蒸好，分裝3天份量。","steps":["電鍋內鍋放糙米+水","外鍋放豬里肌或雞腿排","上層蒸盤放花椰菜+木耳","按下開關，完成後分裝"],"ingredients":["糙米飯","豬里肌/去皮雞腿排","綠花椰菜","木耳","鹽/米酒少許"],"protein":"約45g/盒","cal":"約520kcal/盒","effort":2},{"id":"miso_tofu_soup","name":"罐頭豆腐味噌湯","icon":"🍜","time":"5分鐘","desc":"暖身飽足。鯖魚罐頭直接入湯，零浪費。","steps":["煮500ml熱水","加入味噌醬一匙溶解","放入板豆腐切塊＋鯖魚罐頭（含湯汁）","加乾海帶芽泡發即完成"],"ingredients":["鯖魚罐頭","板豆腐","味噌醬","乾海帶芽"],"protein":"約30g","cal":"約380kcal","effort":1}],"principles":[{"id":"time_first","icon":"⏱","title":"時間先行原則","body":"每個飲食決策的第一優先是「需要多少時間」。準備時間 = 0 的選項永遠優先。當你累或忙時，系統自動降級到下一個即食組合，而不是放棄。"},{"id":"fixed_combo","icon":"🎯","title":"固定組合 > 每次選擇","body":"為工作日設計3種「預設組合」，週末才進行多樣化選擇。減少決策次數是根本。不需每餐優化，一週內均衡就夠。"},{"id":"meal_prep_layers","icon":"📦","title":"備餐階層","body":"週末備一次（電鍋法）→ 平日快速組合（超商+罐頭）→ 緊急備案（即食包）。三個階層確保無論多忙都有合理選項。"},{"id":"one_pot","icon":"🍲","title":"一鍋料理邏輯","body":"一口鍋、一個動作。食材優先選擇「丟進去就熟」的品項：板豆腐、蛋、葉菜類、冷凍毛豆、罐頭海鮮。"},{"id":"natural_first","icon":"🌱","title":"天然食材優先","body":"加工品（蛋白棒、代餐飲料）作為備援，不作為主力。加工程度越低，飽足訊號越準確。"},{"id":"density_over_counting","icon":"📊","title":"每卡效率 > 計算熱量","body":"選擇高每百卡蛋白質或纖維的食材，讓同樣熱量預算帶來更多飽足感與營養密度。不需精算總熱量，密度高的食材自然控熱。"}],"food_bom":[{"id":"bubbletea","icon":"🧋","craving":"手搖（全糖珍奶）","keep":"甜味、嚼感、下午的儀式感","swap":"換無糖鮮奶茶，珍珠改寒天或愛玉，甜度走「全糖→微糖→無糖＋代糖」分階段下調","cut":"砍掉液態糖與奶精","load":"熱量約剩 1/3","note":"重點不是戒，是分階段把糖往下調，讓嘴巴慢慢習慣。"},{"id":"latenight","icon":"🌙","craving":"宵夜（鹹酥雞／泡麵）","keep":"鹹、香、熱、有嚼勁的滿足","swap":"改滷味選蛋＋豆乾＋青菜＋海帶，或關東煮選蘿蔔＋雞胸＋蒟蒻，重口味用蔥蒜辣補回來","cut":"砍掉油炸與泡麵油包","load":"熱量約砍半、蛋白翻倍","note":"真的餓就吃，但用高蛋白高纖維版本止飢，別空腹硬撐到爆吃。"}]};
+
+let DATA = null;
+
+const state = {
+  search: "",
+  protein: { sort:"time", f:{instant:false,nocool:false,plant:false} },
+  fiber:   { sort:"time", f:{instant:false,nocool:false,highsat:false} }
+};
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* tier helpers ------------------------------------------------ */
+function prTier(v){ return v>=85 ? "hi" : v>=65 ? "mid" : "lo"; }
+function densityProtein(it){ return it.protein && it.cal ? (it.protein/it.cal*100) : 0; }
+function densityFiber(it){ return it.fiber && it.cal ? (it.fiber/it.cal*100) : 0; }
+function densTierP(d){ return d>=12 ? "hi" : d>=8 ? "mid" : "lo"; }
+function densTierF(d){ return d>=10 ? "hi" : d>=6 ? "mid" : "lo"; }
+
+function bar(label,v){
+  const t = prTier(v);
+  return `<div class="bar"><label>${label}</label><div class="track"><i class="t-${t}" style="width:${v}%"></i></div><span class="v mono">${v}</span></div>`;
+}
+
+/* card builders ----------------------------------------------- */
+function proteinCard(it){
+  const d = densityProtein(it);
+  const dt = densTierP(d);
+  const tags = [];
+  if(it.instant) tags.push('<span class="tag go">即食</span>');
+  if(it.nocool)  tags.push('<span class="tag go">免冷藏</span>');
+  if(it.plant)   tags.push('<span class="tag">植物性</span>');
+  if(it.satLevel) tags.push(`<span class="tag">飽足 ${esc(it.satLevel)}</span>`);
+  if(it.prep>0)  tags.push(`<span class="tag">預處理 ${it.prep} 分</span>`);
+
+  let extra = "";
+  if(it.subItems){
+    extra = `<details class="sub"><summary></summary><div class="subgrid">` +
+      it.subItems.map(s=>{
+        const sd=(s.protein/s.cal*100).toFixed(1);
+        return `<div class="subrow"><b>${esc(s.name)}</b><span class="sm">${s.protein}g · ${s.cal}kcal · ${sd}/100kcal</span><span class="sn">${esc(s.note||"")}</span></div>`;
+      }).join("") + `</div></details>`;
+  }
+  if(it.isRange){
+    extra = `<div class="rangebox">每百卡蛋白質約 <b class="mono" style="color:var(--amber)">${(it.proteinMin/it.calMax*100).toFixed(1)}–${(it.proteinMax/it.calMin*100).toFixed(1)}</b> g／100kcal，視品牌而定。<span class="pill">子表格待補</span><br><span style="color:var(--soft);font-size:11.5px">${esc(it.rangeNote||"")}</span></div>`;
+  }
+
+  return `<article class="fcard">
+    <div class="fcard-h">
+      <span class="ficon">${esc(it.icon||"🍽")}</span>
+      <div class="fname"><h4>${esc(it.name)}</h4><div class="fsub">蛋白 ${it.protein}g · ${it.cal} kcal</div></div>
+      <div class="dens dens-${dt}"><b class="mono">${d.toFixed(1)}</b><em>g／100kcal</em></div>
+    </div>
+    <div class="bars">${bar("省時",it.time)}${bar("飽足",it.sat)}${bar("划算",it.cost)}</div>
+    <div class="tags">${tags.join("")}</div>
+    <p class="fnote">${esc(it.note||"")}</p>
+    ${extra}
+  </article>`;
+}
+
+function fiberCard(it){
+  const d = densityFiber(it);
+  const dt = densTierF(d);
+  const tags = [];
+  if(it.instant) tags.push('<span class="tag go">即食</span>');
+  if(it.nocool)  tags.push('<span class="tag go">免冷藏</span>');
+  if(it.highsat) tags.push('<span class="tag go">高飽足</span>');
+  if(it.satLevel) tags.push(`<span class="tag">飽足 ${esc(it.satLevel)}</span>`);
+  if(it.prep>0)  tags.push(`<span class="tag">處理 ${it.prep} 分</span>`);
+
+  return `<article class="fcard">
+    <div class="fcard-h">
+      <span class="ficon">${esc(it.icon||"🥗")}</span>
+      <div class="fname"><h4>${esc(it.name)}</h4><div class="fsub">纖維 ${it.fiber}g · ${it.cal} kcal</div></div>
+      <div class="dens dens-${dt}"><b class="mono">${d.toFixed(1)}</b><em>g／100kcal</em></div>
+    </div>
+    <div class="bars">${bar("省時",it.time)}${bar("飽足",it.sat)}${bar("划算",it.cost)}</div>
+    <div class="tags">${tags.join("")}</div>
+    <p class="fnote">${esc(it.note||"")}</p>
+  </article>`;
+}
+
+function recipeCard(r){
+  const dots = [1,2,3].map(n=>`<span class="${n<=r.effort?'on':''}"></span>`).join("");
+  return `<article class="rcard">
+    <div class="rcard-h">
+      <span class="ficon">${esc(r.icon||"🍲")}</span>
+      <div class="rname"><h4>${esc(r.name)}</h4><div class="rtime">⏱ ${esc(r.time)}</div></div>
+      <div class="effort" title="費力程度">${dots}</div>
+    </div>
+    <p class="rdesc">${esc(r.desc||"")}</p>
+    <ol class="steps">${(r.steps||[]).map(s=>`<li>${esc(s)}</li>`).join("")}</ol>
+    <div class="ring">${(r.ingredients||[]).map(i=>`<span class="tag">${esc(i)}</span>`).join("")}</div>
+    <div class="rmacros"><span>蛋白 <b>${esc(r.protein)}</b></span><span>熱量 ${esc(r.cal)}</span></div>
+  </article>`;
+}
+
+function principleCard(p){
+  return `<div class="pcard"><h4><span class="pi">${esc(p.icon||"•")}</span>${esc(p.title)}</h4><p>${esc(p.body)}</p></div>`;
+}
+
+function bomCard(b){
+  const metrics=[];
+  if(b.load) metrics.push(`<span class="tag go">${esc(b.load)}</span>`);
+  return `<article class="fcard bom">
+    <div class="fcard-h"><span class="ficon">${esc(b.icon||"🔁")}</span>
+      <div class="fname"><h4>${esc(b.craving||"")}</h4><div class="fsub">保留口感：${esc(b.keep||"")}</div></div>
+    </div>
+    <div class="bomflow">
+      <div class="bomrow swap"><span class="bl">改造版</span><p>${esc(b.swap||"")}</p></div>
+      ${b.cut?`<div class="bomrow"><span class="bl">砍掉</span><p>${esc(b.cut)}</p></div>`:""}
+    </div>
+    ${metrics.length?`<div class="bommetrics">${metrics.join("")}</div>`:""}
+    ${b.note?`<p class="fnote">${esc(b.note)}</p>`:""}
+  </article>`;
+}
+
+/* filter + sort ----------------------------------------------- */
+function applyList(items, kind){
+  const st = state[kind];
+  const q = state.search.trim().toLowerCase();
+  let out = items.filter(it=>{
+    for(const k in st.f){ if(st.f[k] && !it[k]) return false; }
+    if(q){
+      const hay = (it.name+" "+(it.note||"")).toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  const dens = kind==="protein"?densityProtein:densityFiber;
+  const key = st.sort;
+  out.sort((a,b)=>{
+    if(key==="density") return dens(b)-dens(a);
+    return (b[key]||0)-(a[key]||0);
+  });
+  return out;
+}
+
+/* render ------------------------------------------------------ */
+function render(){
+  const P = applyList(DATA.proteins, "protein");
+  const F = applyList(DATA.fibers, "fiber");
+  $("#p-cards").innerHTML = P.length ? P.map(proteinCard).join("") : `<div class="empty">沒有符合的選項。試著放寬條件，或點「重設」。</div>`;
+  $("#f-cards").innerHTML = F.length ? F.map(fiberCard).join("") : `<div class="empty">沒有符合的選項。試著放寬條件，或點「重設」。</div>`;
+  $("#p-count").textContent = P.length + " 項";
+  $("#f-count").textContent = F.length + " 項";
+}
+
+function renderStatic(){
+  $("#r-cards").innerHTML = (DATA.recipes||[]).map(recipeCard).join("");
+  $("#p-principles").innerHTML = (DATA.principles||[]).map(principleCard).join("");
+  if(DATA.meta){
+    $("#meta-ver").innerHTML = `<i class="dot" style="background:var(--amber);box-shadow:0 0 8px var(--amber)"></i>v${esc(DATA.meta.version)} · 更新 ${esc(DATA.meta.updated)}`;
+  }
+
+  // Food BOM（破功替代矩陣）：有資料才顯示
+  const bom = DATA.food_bom || DATA.foodBom || [];
+  const bomSec = document.querySelector("#foodbom");
+  if(bom.length){ $("#bom-cards").innerHTML = bom.map(bomCard).join(""); bomSec.hidden = false; }
+  else { bomSec.hidden = true; }
+
+  // 時間階層代表標籤
+  const all = [...(DATA.proteins||[]), ...(DATA.fibers||[])];
+  const chip = n => `<span class="tag">${esc(n)}</span>`;
+  const t1 = all.filter(x=>x.instant && (x.prep||0)<=1).sort((a,b)=>b.time-a.time).slice(0,4);
+  const t2 = all.filter(x=>x.instant).sort((a,b)=>b.sat-a.sat).slice(0,4);
+  const t3 = (DATA.recipes||[]).slice(0,4);
+  $("#t1-tags").innerHTML = t1.map(x=>chip(x.name)).join("");
+  $("#t2-tags").innerHTML = t2.map(x=>chip(x.name)).join("");
+  $("#t3-tags").innerHTML = t3.map(r=>chip(r.name)).join("");
+
+  // 常備清單（從一鍋料理食材聚合）
+  const seen=new Set(), staples=[];
+  (DATA.recipes||[]).forEach(r=>(r.ingredients||[]).forEach(s=>{
+    let n=String(s).replace(/^選配[:：]\s*/,"").replace(/[×x]\s*\d+/g,"").split(/[\/／]/)[0].trim();
+    if(n && !seen.has(n)){ seen.add(n); staples.push(n); }
+  }));
+  $("#staples").innerHTML = `<span class="slbl">常備清單</span>` + staples.slice(0,14).map(chip).join("");
+}
+
+/* controls ---------------------------------------------------- */
+function bindSeg(id, kind){
+  $(id).addEventListener("click", e=>{
+    const b = e.target.closest("button[data-sort]"); if(!b) return;
+    state[kind].sort = b.dataset.sort;
+    [...e.currentTarget.children].forEach(x=>x.classList.toggle("on", x===b));
+    render();
+  });
+}
+function bindFil(id, kind){
+  $(id).addEventListener("click", e=>{
+    const b = e.target.closest("button[data-fil]"); if(!b) return;
+    const k = b.dataset.fil;
+    state[kind].f[k] = !state[kind].f[k];
+    b.classList.toggle("on", state[kind].f[k]);
+    render();
+  });
+}
+function syncFilUI(){
+  document.querySelectorAll("#p-fil button").forEach(b=>b.classList.toggle("on", !!state.protein.f[b.dataset.fil]));
+  document.querySelectorAll("#f-fil button").forEach(b=>b.classList.toggle("on", !!state.fiber.f[b.dataset.fil]));
+}
+function syncSortUI(){
+  document.querySelectorAll("#p-sort button").forEach(b=>b.classList.toggle("on", b.dataset.sort===state.protein.sort));
+  document.querySelectorAll("#f-sort button").forEach(b=>b.classList.toggle("on", b.dataset.sort===state.fiber.sort));
+}
+
+function resetState(){
+  state.search="";
+  $("#search").value="";
+  state.protein={sort:"time",f:{instant:false,nocool:false,plant:false}};
+  state.fiber={sort:"time",f:{instant:false,nocool:false,highsat:false}};
+}
+
+function bindActions(){
+  document.addEventListener("click", e=>{
+    const b = e.target.closest("[data-scen]"); if(!b) return;
+    const s = b.dataset.scen;
+    const go = sel => { const el=document.querySelector(sel); if(el) el.scrollIntoView({behavior:"smooth",block:"start"}); };
+
+    if(s==="reset"){ resetState(); syncFilUI(); syncSortUI(); render(); return; }
+    if(s==="t3"){ go("#recipes"); return; }
+
+    if(s==="t1"){          // 0–2′ 即食：省時優先
+      state.protein={sort:"time",f:{instant:true,nocool:false,plant:false}};
+      state.fiber={sort:"time",f:{instant:true,nocool:false,highsat:false}};
+    } else if(s==="t2"){   // 3–10′ 超商：飽足優先
+      state.protein={sort:"sat",f:{instant:true,nocool:false,plant:false}};
+      state.fiber={sort:"sat",f:{instant:true,nocool:false,highsat:false}};
+    } else if(s==="home"){ // 家庭飯桌補位：即食＋免冷藏
+      state.protein={sort:"sat",f:{instant:true,nocool:true,plant:false}};
+      state.fiber={sort:"sat",f:{instant:true,nocool:true,highsat:false}};
+    } else { return; }
+
+    syncFilUI(); syncSortUI(); render(); go("#protein");
+  });
+}
+
+function boot(){
+  renderStatic();
+  render();
+  bindSeg("#p-sort","protein"); bindSeg("#f-sort","fiber");
+  bindFil("#p-fil","protein"); bindFil("#f-fil","fiber");
+  bindActions();
+  let t;
+  $("#search").addEventListener("input", e=>{
+    clearTimeout(t);
+    t = setTimeout(()=>{ state.search = e.target.value; render(); }, 120);
+  });
+}
+
+/* load: data.json first, fallback snapshot for offline preview */
+fetch("../data.json", {cache:"no-store"})
+  .then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(d=>{ DATA = d; boot(); })
+  .catch(()=>{ DATA = FALLBACK; boot(); });
+</script>
 </body>
 </html>
